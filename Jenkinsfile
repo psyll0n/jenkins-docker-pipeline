@@ -8,7 +8,7 @@ pipeline {
         }
         stage("run") { 
             steps {  
-                sh "docker run --rm hello_there"
+                sh "docker run -rm -d -p 8888:80  --rm hello_there"
             }
         }
     }
